@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server/index.js"
+    "server-dev": "nodemon ./server/index.js",
+    "artillery": "artillery run hello.yml"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.2"
+  },
+  "devDependencies": {
+    "newrelic": "^5.11.0"
   }
 }
