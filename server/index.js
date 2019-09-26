@@ -9,7 +9,7 @@ app.use('/', express.static('./loader/'));
 app.use('/listing/:id', express.static('./public'));
 app.use(morgan('dev'));
 
-app.get('/api/listing/:listingID', (req, res) => {
+app.get('/api/listing/:listingID/photos', (req, res) => {
   const { listingID } = req.params;
   res.redirect(`http://ec2-54-183-195-148.us-west-1.compute.amazonaws.com:3100/api/listing/${listingID}`);
 });
